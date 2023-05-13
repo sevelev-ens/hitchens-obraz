@@ -1,0 +1,30 @@
+---
+---
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "{{ site.title | escape }}",
+    "home_page_url": "{{ site.baseurl }}",
+    "feed_url": "{{ site.baseurl + "/feed.json" }}",
+    "description": {{ site.description | tojson }},
+    "icon": "{{ site.baseurl + site.icon }}",
+    "favicon": "{{ site.baseurl + "/favicon.ico" }}",
+    "expired": false,
+    "items": [
+    {% for post in site.posts[:15] %}
+      {% if post.draft %}{% else %}
+        {
+            "id": "{{ post.url | sha1 }}",
+            {% if post.title != "" %}"title": {{ post.title | tojson }},{% endif %}
+            "content_text": {{ post.content | striptags | tojson }},
+            "content_html": {{ post.content | markdownify | tojson }},
+            "url": "{{ site.baseurl + post.url }}",
+            "date_published": "{{ post.date.strftime("%Y%m%dT%H%M%S.%fZ") }}",
+            "date_modified": "{{ post.date.strftime("%Y%m%dT%H%M%S.%fZ") }}",
+            "author": {
+                "name": "{{ post.author }}"
+            }
+        }{% if loop.last == false %},{% endif %}
+        {% endif %}
+    {% endfor %}
+    ]
+}

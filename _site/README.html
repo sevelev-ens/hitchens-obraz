@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Hitchens &mdash; Hitchens</title>
+
+    <meta name="description" content="An inarguably well-designed Jekyll theme.">  
+
+    <link rel="stylesheet" href="/assets/css/main.css?1683954277%N">
+
+    <link rel="apple-touch-icon" href="/assets/images/icon-512.png"></head>
+  <body>
+
+    
+      <a href="#main" class="skip-navigation">
+        Skip to content
+      </a>
+    
+
+    
+
+  
+
+
+  <nav class="site-navigation" role="navigation">
+    <ul>
+      <li>
+        <a href="/">
+          Home
+        </a>
+      </li>
+    
+      <li >
+        
+          <a href="/about.html">
+            About
+          </a>
+        
+      </li>
+    
+      <li >
+        
+          <a href="https://github.com/patdryburgh/hitchens">
+            Source
+          </a>
+        
+      </li>
+    
+      <li >
+        
+          <a href="http://patdryburgh.com">
+            Designer
+          </a>
+        
+      </li>
+    
+    </ul>
+  </nav>
+
+
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" id="main" role="article" aria-label="Content">
+
+  
+    <h1 class="post-title divided p-name" itemprop="name headline">
+      Hitchens
+    </h1>
+  
+
+  <div class="post-content e-content" itemprop="articleBody">
+    
+<p>An inarguably well-designed <a href="http://jekyllrb.com">Jekyll</a> theme by <a href="https://patdryburgh.com">Pat Dryburgh</a>.</p>
+<p><img alt="Hitchens Preview" src="https://raw.githubusercontent.com/patdryburgh/hitchens/master/screenshot.png" /></p>
+<p>Undoubtably one of the great minds of our time, <a href="https://en.wikipedia.org/wiki/Christopher_Hitchens">Christopher Hitchens</a> challenged his readers to think deeply on topics of politics, religion, war, and science. This Jekyll theme's design is inspired by the trade paperback version his book, <a href="https://en.wikipedia.org/wiki/Arguably">Arguably</a>, and is dedicated to his memory.</p>
+<h2>Quick Start</h2>
+<p>This theme is, itself, a Jekyll blog, meaning the code base you see has everything you need to run a Jekyll powered blog!</p>
+<p>To get started quickly, follow the instructions below:</p>
+<ol>
+<li>Click the <code>Fork</code> button at the top of <a href="https://github.com/patdryburgh/hitchens/">the repository</a>;</li>
+<li>Go to your forked repo's <code>Settings</code> screen;</li>
+<li>Scroll down to the <code>GitHub Pages</code> section;</li>
+<li>Under <code>Source</code>, select the <code>Master</code> branch;</li>
+<li>Hit <code>Save</code>.</li>
+<li>Follow <a href="https://jekyllrb.com/docs/configuration/">Jekyll's instructions to configure your new Jekyll site</a>.</li>
+</ol>
+<h2>Manual Installation</h2>
+<p>If you've already created your Jekyll site or are comfortable with the command line, you can follow <a href="https://jekyllrb.com/docs/">Jekyll's Quickstart instructions</a> add this line to your Jekyll site's <code>Gemfile</code>:</p>
+<p><code>ruby
+gem "hitchens-theme"</code></p>
+<p>And add the following lines to your Jekyll site's <code>_config.yml</code>:</p>
+<p><code>yaml
+theme: hitchens-theme</code></p>
+<p>Depending on your <a href="https://jekyllrb.com/docs/configuration/options/">site's configuration</a>, you may also need to add:</p>
+<p><code>yaml
+ignore_theme_config: true</code></p>
+<p>And then on the command line, execute:</p>
+<pre><code>$ bundle
+</code></pre>
+<p>Or install the theme yourself as:</p>
+<pre><code>$ gem install hitchens-theme
+</code></pre>
+<h2>Usage</h2>
+<h3>Home Layout</h3>
+<p>The <code>home</code> layout presents a list of articles ordered chronologically. The theme uses <a href="https://jekyllrb.com/docs/pagination/#enable-pagination">Jekyll's built-in pagination</a> which can be configured in your <code>_config.yml</code> file.</p>
+<p>The masthead of the home page is derived from the <code>title</code> and <code>description</code> set in your site's <code>_config.yml</code> file.</p>
+<h4>Navigation</h4>
+<p>To include a navigation menu in your site's masthead and footer:</p>
+<ol>
+<li>Create a <code>_data</code> directory in the root of your site.</li>
+<li>Add a <code>menu.yml</code> file to the <code>_data</code> directory.</li>
+<li>Use the following format to list your menu items:</li>
+</ol>
+<p>```
+- title: About
+  url: /about.html</p>
+<ul>
+<li>title: Source
+  url: https://github.com/patdryburgh/hitchens
+```</li>
+</ul>
+<p>Be sure to start your <code>url</code>s with a <code>/</code>.</p>
+<h4>Pagination</h4>
+<p>To paginate your posts, add the following line to your site's <code>Gemfile</code>:</p>
+<p><code>gem "jekyll-paginate"</code></p>
+<p>Then, add the following lines to your site's <code>_config.yml</code> file:</p>
+<p>```
+plugins:
+  - jekyll-paginate</p>
+<p>paginate: 20
+paginate_path: "/page/:num/"
+```</p>
+<p>You can set the <code>paginate</code> and <code>paginate_path</code> settings to whatever best suits you.</p>
+<h4>Excerpts</h4>
+<p>To show <a href="https://jekyllrb.com/docs/posts/#post-excerpts">excerpts</a> of your blog posts on the home page, add the following settings to your site's <code>_config.yml</code> file:</p>
+<p><code>show_excerpts: true</code></p>
+<p>By default, excerpts that have more than 140 characters will be truncated to 20 words. In order to override the number of words you'd like to show for your excerpts, add the following setting to your site's <code>_config.yml</code> file:</p>
+<p><code>excerpt_length: 20</code></p>
+<p>To disable excerpt truncation entirely, simply set <code>excerpt_length</code> to <code>0</code> in your site's <code>_config.yml</code> file, like so:</p>
+<p><code>excerpt_length: 0</code></p>
+<p>If you do this, the theme will still respect Jekyll's <code>excerpt_separator</code> feature as <a href="https://jekyllrb.com/docs/posts/#post-excerpts">described in the Jekyll documentation</a>.</p>
+<h4>Title-less Posts</h4>
+<p>If you want to publish posts that don't have a title, add the following setting to the <a href="https://jekyllrb.com/docs/frontmatter/">front matter</a> of the post:</p>
+<p><code>title: ""</code></p>
+<p>When you do this, the home page will display a truncated <a href="https://jekyllrb.com/docs/posts/#post-excerpts">excerpt</a> of the first paragraph of your post.</p>
+<p>Note that setting <code>excerpt_length</code> in your site's <code>_config.yml</code> file will set the length of <em>all</em> excerpts, regardless of whether the post has a title or not. For posts with a title, the excerpt will appear under the title and slightly lighter. For title-less posts, the excerpt will appear as if it were a title.</p>
+<h3>Post Layout</h3>
+<p>A sparsely decorated layout designed to present long-form writing in a manner that's pleasing to read.</p>
+<p>To use the post layout, add the following to your post's <a href="https://jekyllrb.com/docs/frontmatter/">front matter</a>:</p>
+<p><code>layout: post</code></p>
+<h3>Icons</h3>
+<p>The <a href="https://jsonfeed.org/version/1">JSON Feed spec</a> states that feeds should include an icon. To add your icon, add the following line in your site's <code>_config.yml</code> file:</p>
+<p><code>feed_icon: /assets/images/icon-512.png</code></p>
+<p>Then, replace the <code>/assets/images/icon-512.png</code> file with your own image.</p>
+<h3>Credits</h3>
+<p>The theme credits that appear at the bottom of each page can be turned off by including the following line in your site's <code>_config.yml</code> file:</p>
+<p><code>hide_credits: true</code></p>
+<h3>Search</h3>
+<p>The theme uses a <a href="https://ddg.patdryburgh.com">custom DuckDuckGo Search Form</a> that can be turned off by including the following line in your site's <code>_config.yml</code> file: </p>
+<p><code>hide_search: true</code></p>
+<h3>Font</h3>
+<p>I spent a good amount of time trying to identify the font used on the front cover of the trade paperback version of Arguably. Unfortunately, I failed to accurately identify the exact font used. If you happen to know what font is used on the book cover, I would appreciate you <a href="mailto:hello@patdryburgh.com">letting me know</a> :)</p>
+<p>The theme includes a version of <a href="https://fonts.google.com/specimen/EB+Garamond">EB Garamond</a>, designed by Georg Duffner and Octavio Pardo. It's the closest alternative I could come up with that included an open license to include with the theme.</p>
+<p>A <a href="https://github.com/patdryburgh/hitchens/blob/master/assets/fonts/OFL.txt">copy of the license</a> has been included in the <code>assets</code> folder and must be included with any distributions of this theme that include the EB Garamond font files.</p>
+<h2>Contributing &amp; Requesting Features</h2>
+<p>Bug reports, feature requests, and pull requests are welcome on GitHub at <a href="https://github.com/patdryburgh/hitchens">https://github.com/patdryburgh/hitchens</a>.</p>
+<p>This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the <a href="http://contributor-covenant.org">Contributor Covenant</a> code of conduct.</p>
+<h2>Development</h2>
+<p>To set up your environment to develop this theme, run <code>bundle install</code>.</p>
+<p>The theme is setup just like a normal Jekyll site. To test the theme, run <code>bundle exec jekyll serve</code> and open your browser at <code>http://localhost:4000</code>. This starts a Jekyll server using the theme. Add pages, documents, data, etc. like normal to test the theme's contents. As you make modifications to the theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.</p>
+<h2>License</h2>
+<p>The code for this theme is available as open source under the terms of the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
+<p>The font, EB Garamond, is Copyright 2017 The EB Garamond Project Authors and licensed under the <a href="https://github.com/patdryburgh/hitchens/blob/master/assets/fonts/OFL.txt">SIL Open Font License Version 1.1</a>.</p>
+<p>Graphics are released to the public domain.</p>
+  </div>
+
+  <div class="post-meta">
+    
+    
+  </div>
+
+
+
+</article>
+
+    
+      <form method="get" id="search" action="https://duckduckgo.com/">
+  <input type="hidden" name="sites" value=""/>
+  <input type="hidden" name="k8" value="#222222"/>
+  <input type="hidden" name="k9" value="#dc4b3c"/>
+  <input type="hidden" name="kt" value="h"/>
+  <input type="text" id="search__input" name="q" placeholder="Search&hellip;"/ autocomplete="off">
+  <button type="submit" class="btn btn-bordered" tabindex="-1">Search</button>
+</form>
+    
+
+    
+
+
+  <nav class="site-navigation" role="navigation">
+    <ul>
+      <li>
+        <a href="/">
+          Home
+        </a>
+      </li>
+    
+      <li >
+        
+          <a href="/about.html">
+            About
+          </a>
+        
+      </li>
+    
+      <li >
+        
+          <a href="https://github.com/patdryburgh/hitchens">
+            Source
+          </a>
+        
+      </li>
+    
+      <li >
+        
+          <a href="http://patdryburgh.com">
+            Designer
+          </a>
+        
+      </li>
+    
+    </ul>
+  </nav>
+
+
+    
+      <aside class="site-credits">
+        <p>
+          <small><a href="https://github.com/patdryburgh/hitchens">Hitchens Theme</a> powered by <a href="http://jekyllrb.com">Jekyll</a></small>
+        </p>
+      </aside>
+    
+
+  </body>
+</html>
