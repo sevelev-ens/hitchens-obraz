@@ -1,12 +1,12 @@
 <li>
   <a href="{{ site.baseurl + post.url }}" class="post-link">
     <div class="post-link__heading">
-      {% if post.title == "" %}{% else %}
+      {% if post.title == "" %}
+      {% include "post-excerpt.html" %}
+      {% else %}
           <h1 class="post-link__title">      
             {{ post.title }}
-          </h1>
-      {% else %}
-        {% include "post-excerpt.html" %}
+          </h1>        
       {% endif %}
       {% if post.title != "" and site.show_excerpts == true %}
         {% include "post-excerpt.html" %}

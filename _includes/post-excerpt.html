@@ -1,6 +1,5 @@
-{% capture excerpt %}
-  {{ post.excerpt | replace: "<p>", "" | replace: "</p>", "" }}
-{% endcapture %}
+{% set excerpt = post.content|striptags|replace("<p>", "")|replace("</p>", "")  %}
+
 
 {% if site.excerpt_length %}
   {% set excerpt_length = site.excerpt_length %}
@@ -8,11 +7,11 @@
   {% set excerpt_length = 20 %}
 {% endif %}
 
-{% set excerpt_size = excerpt | size %}
+{% set excerpt_size = excerpt|length %}
 
 <span class="post-link__excerpt">
   {% if excerpt_size > 140 and excerpt_length > 0 %}
-    {{ truncate(excerpt, excerpt_length*9, '…') }}
+    {{ excerpt|truncate(excerpt_length*4, '…') }}
   {% else %}
     {{ excerpt }}
   {% endif %}

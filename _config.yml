@@ -10,13 +10,6 @@ github_username:  sevelev-ens
 # Build settings
 markdown: kramdown
 
-plugins:
-  - jekyll-paginate
-
-paginate: 3
-paginate_path: "/page/:num/"
-
-
 data:
   menu:
     - title: About

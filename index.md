@@ -1,6 +1,6 @@
 ---
 title: Home
-layout: post
+layout: home
 ---
 vdsqfilusdf
 bs smfkiubsmdfoiubhs
