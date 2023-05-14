@@ -15,4 +15,4 @@ An [Obraz](https://obraz.pirx.ru/) port of [Hitchens](https://github.com/patdryb
 
 **Netlify** If you deploy to Netlify, make sure to set build command to *`pip install pyyaml==5.3.1 obraz ; obraz build`* and output folder to *`_site`*.
 
-**Static files** Some static files do not end up in the generated output, for example *`/assets/images/divider.svg`* does not appear at *`https://hitchens-obraz.netlify.app/assets/images/divider.svg`* (while neighbouring *`icon-512.png`* [does](https://hitchens-obraz.netlify.app/assets/images/icon-512.png)).
+**Static files** Some static files do not end up in the generated output, for example *`/assets/images/divider.svg`* does not appear at [*`https://hitchens-obraz.netlify.app/assets/images/divider.svg`*](https://hitchens-obraz.netlify.app/assets/images/divider.svg) (while neighbouring *`icon-512.png`* [does](https://hitchens-obraz.netlify.app/assets/images/icon-512.png)).
