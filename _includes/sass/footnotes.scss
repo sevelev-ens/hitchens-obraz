@@ -1,23 +1,24 @@
 .footnote {
-  border: 1px solid $muted-text-color;
+  border: 1px solid {{constants.mutedtextcolor}};
   border-radius: 1em;
-  color: $text-color;
+  color: {{constants.text_color}};
   display: inline;
   font-size: .75em;
   font-weight: 700;
   padding: 0 .75em;
   text-decoration: none;
   margin: 0 .25em;
-  &:hover,
-  &:focus {
-    background: $brand-color;
-    border-color: $brand-color;
-  }
 }
+
+.footnote:hover, .footnote:focus {
+  background: {{constants.brandcolor}};
+  border-color: {{constants.brandcolor}};
+}
+
 
 .footnotes::before {
   content: '';
-  @include divider;
+  {% include "sass/divider.mixin" %}
   margin: 4em auto;
 }
 

@@ -1,7 +1,7 @@
 body {
-  background: $brand-color;
-  color: $text-color;
-  font-family: $font-family;
+  background: {{constants.brandcolor}};
+  color: {{constants.text_color}};
+  font-family: {{constants.font_family}};
   font-size: 1.3125em;
   line-height: 1.5;
 }
@@ -53,20 +53,21 @@ strong {
 }
 
 a {
-  color: $text-color;
+  color: {{constants.text_color}};
 }
 
 a:focus {
-  outline: 1px dashed $text-color;
+  outline: 1px dashed {{constants.text_color}};
 }
 
 blockquote {
   margin: 2em auto;
   opacity: .8;
-  > * {
+}
+
+blockquote > * {
     padding: 0 3em;
   }
-}
 
 blockquote.epigraph {
   font-style: italic;
@@ -84,7 +85,7 @@ p > cite {
 hr {
   border: 0;
   height: 0;
-  @include divider;
+  {% include "sass/divider.mixin" %}
   margin: 4em 0;
 }
 
@@ -109,7 +110,7 @@ figcaption {
 
 .divided::after {
   content: "";
-  @include divider;
+  {% include "sass/divider.mixin" %}
 }
 
 .home {
@@ -125,14 +126,15 @@ figcaption {
 }
 
 .post-date {
-  color: $muted-text-color;
+  color: {{constants.mutedtextcolor}};
   display: block;
   font-size: .825em;
   white-space: nowrap;
   text-transform: uppercase;
-  .post-link & {
+}
+
+.post-link .post-date {
     padding: .5em 0;
-  }
 }
 
 .site-credits {
@@ -142,7 +144,7 @@ figcaption {
 }
 
 .skip-navigation {
-  background: $brand-color;
+  background: {{constants.brandcolor}};
   border: 1px dashed transparent;
   display: block;
   font-size: .875em;
@@ -152,10 +154,11 @@ figcaption {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  &:hover,
-  &:focus {
-    background: lighten($brand-color, 2.5%);
-    border-color: $text-color;
-    margin-top: 0;
-  }
+}
+
+.skip-navigation:hover,
+.skip-navigation:focus {
+  background: {{constants.brandcolorlighter}};
+  border-color: {{constants.text_color}};
+  margin-top: 0;
 }

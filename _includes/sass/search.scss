@@ -7,28 +7,30 @@
 #search__input {
   background: transparent;
   border: 0;
-  font: 1em $font-family;
+  font: 1em {{constants.font_family}};
   padding: .5em;
-  color: $text-color;
+  color: {{constants.text_color}};
   text-align: center;
-  &:focus {
-    outline: 1px dashed $text-color;
-  }
 }
+
+#search__input:focus {
+  outline: 1px dashed {{constants.text_color}};
+}
+
 
 #search button[type="submit"] {
   display: none;
 }
 
 ::-webkit-input-placeholder {
-  color: $muted-text-color;
+  color: {{constants.mutedtextcolor}};
 }
 ::-moz-placeholder {
-  color: $muted-text-color;
+  color: {{constants.mutedtextcolor}};
 }
 :-ms-input-placeholder {
-  color: $muted-text-color;
+  color: {{constants.mutedtextcolor}};
 }
 :-moz-placeholder {
-  color: $muted-text-color;
+  color: {{constants.mutedtextcolor}};
 }

@@ -11,7 +11,7 @@
 
     <meta name="description" content="An inarguably well-designed Jekyll theme.">  
 
-    <link rel="stylesheet" href="/assets/css/main.css?1683954277%N">
+    <link rel="stylesheet" href="/assets/css/main.css?1684044529%N">
 
     <link rel="apple-touch-icon" href="/assets/images/icon-512.png"></head>
   <body>
@@ -74,36 +74,7 @@
 
   <div class="post-content e-content" itemprop="articleBody">
     
-<p>An inarguably well-designed <a href="http://jekyllrb.com">Jekyll</a> theme by <a href="https://patdryburgh.com">Pat Dryburgh</a>.</p>
-<p><img alt="Hitchens Preview" src="https://raw.githubusercontent.com/patdryburgh/hitchens/master/screenshot.png" /></p>
-<p>Undoubtably one of the great minds of our time, <a href="https://en.wikipedia.org/wiki/Christopher_Hitchens">Christopher Hitchens</a> challenged his readers to think deeply on topics of politics, religion, war, and science. This Jekyll theme's design is inspired by the trade paperback version his book, <a href="https://en.wikipedia.org/wiki/Arguably">Arguably</a>, and is dedicated to his memory.</p>
-<h2>Quick Start</h2>
-<p>This theme is, itself, a Jekyll blog, meaning the code base you see has everything you need to run a Jekyll powered blog!</p>
-<p>To get started quickly, follow the instructions below:</p>
-<ol>
-<li>Click the <code>Fork</code> button at the top of <a href="https://github.com/patdryburgh/hitchens/">the repository</a>;</li>
-<li>Go to your forked repo's <code>Settings</code> screen;</li>
-<li>Scroll down to the <code>GitHub Pages</code> section;</li>
-<li>Under <code>Source</code>, select the <code>Master</code> branch;</li>
-<li>Hit <code>Save</code>.</li>
-<li>Follow <a href="https://jekyllrb.com/docs/configuration/">Jekyll's instructions to configure your new Jekyll site</a>.</li>
-</ol>
-<h2>Manual Installation</h2>
-<p>If you've already created your Jekyll site or are comfortable with the command line, you can follow <a href="https://jekyllrb.com/docs/">Jekyll's Quickstart instructions</a> add this line to your Jekyll site's <code>Gemfile</code>:</p>
-<p><code>ruby
-gem "hitchens-theme"</code></p>
-<p>And add the following lines to your Jekyll site's <code>_config.yml</code>:</p>
-<p><code>yaml
-theme: hitchens-theme</code></p>
-<p>Depending on your <a href="https://jekyllrb.com/docs/configuration/options/">site's configuration</a>, you may also need to add:</p>
-<p><code>yaml
-ignore_theme_config: true</code></p>
-<p>And then on the command line, execute:</p>
-<pre><code>$ bundle
-</code></pre>
-<p>Or install the theme yourself as:</p>
-<pre><code>$ gem install hitchens-theme
-</code></pre>
+<p>An <a href="https://obraz.pirx.ru/">Obraz</a> port of <a href="https://github.com/patdryburgh/hitchens">Hitchens</a>, a <a href="http://jekyllrb.com">Jekyll</a> theme by <a href="https://patdryburgh.com">Pat Dryburgh</a>. Uses <a href="https://jinja.palletsprojects.com/en/3.1.x/">Jinja</a> as template engine.</p>
 <h2>Usage</h2>
 <h3>Home Layout</h3>
 <p>The <code>home</code> layout presents a list of articles ordered chronologically. The theme uses <a href="https://jekyllrb.com/docs/pagination/#enable-pagination">Jekyll's built-in pagination</a> which can be configured in your <code>_config.yml</code> file.</p>
@@ -156,26 +127,10 @@ paginate_path: "/page/:num/"
 <p>The <a href="https://jsonfeed.org/version/1">JSON Feed spec</a> states that feeds should include an icon. To add your icon, add the following line in your site's <code>_config.yml</code> file:</p>
 <p><code>feed_icon: /assets/images/icon-512.png</code></p>
 <p>Then, replace the <code>/assets/images/icon-512.png</code> file with your own image.</p>
-<h3>Credits</h3>
-<p>The theme credits that appear at the bottom of each page can be turned off by including the following line in your site's <code>_config.yml</code> file:</p>
+<p><strong>Credits</strong> The theme credits that appear at the bottom of each page can be turned off by including the following line in your site's <code>_config.yml</code> file:</p>
 <p><code>hide_credits: true</code></p>
-<h3>Search</h3>
-<p>The theme uses a <a href="https://ddg.patdryburgh.com">custom DuckDuckGo Search Form</a> that can be turned off by including the following line in your site's <code>_config.yml</code> file: </p>
+<p><strong>Search</strong> The theme uses a <a href="https://ddg.patdryburgh.com">custom DuckDuckGo Search Form</a> that can be turned off by including the following line in your site's <code>_config.yml</code> file: </p>
 <p><code>hide_search: true</code></p>
-<h3>Font</h3>
-<p>I spent a good amount of time trying to identify the font used on the front cover of the trade paperback version of Arguably. Unfortunately, I failed to accurately identify the exact font used. If you happen to know what font is used on the book cover, I would appreciate you <a href="mailto:hello@patdryburgh.com">letting me know</a> :)</p>
-<p>The theme includes a version of <a href="https://fonts.google.com/specimen/EB+Garamond">EB Garamond</a>, designed by Georg Duffner and Octavio Pardo. It's the closest alternative I could come up with that included an open license to include with the theme.</p>
-<p>A <a href="https://github.com/patdryburgh/hitchens/blob/master/assets/fonts/OFL.txt">copy of the license</a> has been included in the <code>assets</code> folder and must be included with any distributions of this theme that include the EB Garamond font files.</p>
-<h2>Contributing &amp; Requesting Features</h2>
-<p>Bug reports, feature requests, and pull requests are welcome on GitHub at <a href="https://github.com/patdryburgh/hitchens">https://github.com/patdryburgh/hitchens</a>.</p>
-<p>This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the <a href="http://contributor-covenant.org">Contributor Covenant</a> code of conduct.</p>
-<h2>Development</h2>
-<p>To set up your environment to develop this theme, run <code>bundle install</code>.</p>
-<p>The theme is setup just like a normal Jekyll site. To test the theme, run <code>bundle exec jekyll serve</code> and open your browser at <code>http://localhost:4000</code>. This starts a Jekyll server using the theme. Add pages, documents, data, etc. like normal to test the theme's contents. As you make modifications to the theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.</p>
-<h2>License</h2>
-<p>The code for this theme is available as open source under the terms of the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
-<p>The font, EB Garamond, is Copyright 2017 The EB Garamond Project Authors and licensed under the <a href="https://github.com/patdryburgh/hitchens/blob/master/assets/fonts/OFL.txt">SIL Open Font License Version 1.1</a>.</p>
-<p>Graphics are released to the public domain.</p>
   </div>
 
   <div class="post-meta">
