@@ -14,3 +14,5 @@ An [Obraz](https://obraz.pirx.ru/) port of [Hitchens](https://github.com/patdryb
 **PyYaml** Obraz seems to be affected by some breaking changes introduced in PyYaml between the versions *`5.3.1`* and *`6.0`*. If you have an error *`Error: load() missing 1 required positional argument: 'Loader`*, downgrade PyYaml.
 
 **Netlify** If you deploy to Netlify, make sure to set build command to *`pip install pyyaml==5.3.1 obraz ; obraz build`* and output folder to *`_site`*.
+
+**Static files** Some static files do not end up in the generated output, for example *`/assets/images/divider.svg`* does not appear at *`https://hitchens-obraz.netlify.app/assets/images/divider.svg`* (while neighbouring *`icon-512.png`* [does](https://hitchens-obraz.netlify.app/assets/images/icon-512.png)).
