@@ -3,15 +3,12 @@ layout: post
 title: About
 ---
 
-Undoubtably one of the great minds of our time, Christopher Hitchens challenged his readers to think deeply on topics of politics, religion, war, and science. This Jekyll theme is designed in his memory.
+*Hitchens-Obraz* is an [Obraz](https://obraz.pirx.ru/) port of [Hitchens](https://github.com/patdryburgh/hitchens), a [Jekyll](http://jekyllrb.com) theme. Uses [Jinja](https://jinja.palletsprojects.com/en/3.1.x/) as template engine.
 
-<figure>
-  <img alt="Christopher Hitchens" src="https://upload.wikimedia.org/wikipedia/commons/6/63/Christopher_Hitchens_2008-04-24_001.jpg" />
-  <figcaption>
-    Photo by Fri Tanke and licensed under the <a href="https://creativecommons.org/licenses/by/3.0/deed.en">Creative Commons Attribution 3.0 Unported</a> license.
-  </figcaption>
-</figure>
+**Data** The data files from *`_data`* have beed moved to *`_config.yml`*.
 
-From [Wikipedia](https://en.wikipedia.org/wiki/Christopher_Hitchens):
+**Sass** templates have been rewritten with Jinja's *`include`* syntax and put into *`_include/sass`*, the variables are set in *`assets/css/main.css`*.
 
->Christopher Eric Hitchens (13 April 1949 – 15 December 2011) was an Anglo-American author, columnist, essayist, orator, religious and literary critic, social critic, and journalist. Hitchens was the author, co-author, editor or co-editor of over 30 books, including five collections of essays on culture, politics and literature. A staple of public discourse, his confrontational style of debate made him both a lauded intellectual and a controversial public figure. He contributed to New Statesman, The Nation, The Weekly Standard, The Atlantic, London Review of Books, The Times Literary Supplement, Slate, Free Inquiry and Vanity Fair.
+**PyYaml** Obraz seems to be affected by some breaking changes introduced in PyYaml between the versions *`5.3.1`* and *`6.0`*. If you have an error *`Error: load() missing 1 required positional argument: 'Loader`*, downgrade PyYaml.
+
+**Netlify** If you deploy to Netlify, make sure to set build command to *`pip install pyyaml==5.3.1 obraz ; obraz build`* and output folder to *`_site`*.
