@@ -19,7 +19,6 @@
 .footnotes::before {
   content: '';
   {% include "sass/divider.mixin" %}
-  margin: 4em auto;
 }
 
 .footnotes {
